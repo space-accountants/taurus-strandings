@@ -8,4 +8,5 @@ Simulation runs for stranded bulls along the coast of Brittany
 
     In order to download ocean data from Coperncius, a registration is mandatory. This can be done [here](https://data.marine.copernicus.eu/register).
 
+1) **02_run_parcels.py** : compute advection forward in time, via seeding from the ship trajectories.
 
