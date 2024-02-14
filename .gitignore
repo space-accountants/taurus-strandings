@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+
+# where al the runs will be placed
+run/
+
 __pycache__/
 *.py[cod]
 *$py.class
