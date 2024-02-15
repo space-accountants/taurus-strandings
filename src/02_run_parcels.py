@@ -1,11 +1,13 @@
+import os
+
 from datetime import timedelta, datetime
 
 from parcels import FieldSet, JITParticle, AdvectionRK4
 from parcels.tools.converters import GeographicPolar, Geographic
 
-from functions.seeds import create_ais_release_pset
-from functions.execution import DeleteErrorParticle
-from functions.advection import StokesDrift
+from .functions.seeds import create_ais_release_pset
+from .functions.execution import DeleteErrorParticle
+from .functions.advection import StokesDrift
 
 # configuration parameters
 t_min, t_max = datetime(2023, 11, 11), datetime(2023, 11, 18)
@@ -28,8 +30,10 @@ dt_samples = timedelta(hours=1)# timestep to release a particle from a track
 ocea_dir = '../data'
 ais_dir = '../data'
 ais_file = 'ship_locations.csv'
+run_dir = '../run'
+run_name = f'fwd_{datetime.now().strftime("%Y-%m-%d_%H")}.zarr'
 
-run_name = f'../run/fwd_{datetime.now().strftime("%Y-%m-%d_%H")}.zarr'
+run_path = os.path.join(run_dir, run_name)
 
 # get ocean model into Fieldset
 filenames = {
@@ -67,7 +71,7 @@ pset = create_ais_release_pset(
         fieldset=fieldset, pclass=JITParticle, to_write='once'
 )
 
-pfile = pset.ParticleFile(name=run_name, outputdt=dt_output)
+pfile = pset.ParticleFile(name=run_path, outputdt=dt_output)
 
 kernels = []
 kernels.append(AdvectionRK4)
@@ -80,4 +84,4 @@ pset.execute(kernels,
              dt=pdt,
              output_file=pfile)
 
-print(f'analyis done, output can be found at: \n {run_name}')
+print(f'analyis done, output can be found at: \n {run_path}')
