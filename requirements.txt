@@ -1,0 +1,6 @@
+os
+datetime
+numpy
+xarray
+copernicus_marine_client
+parcels
