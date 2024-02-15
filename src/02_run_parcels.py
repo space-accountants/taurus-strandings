@@ -3,9 +3,9 @@ from datetime import timedelta, datetime
 from parcels import FieldSet, JITParticle, AdvectionRK4
 from parcels.tools.converters import GeographicPolar, Geographic
 
-from src.functions.seeds import create_ais_release_pset
-from src.functions.execution import DeleteErrorParticle
-from src.functions.advection import StokesDrift
+from functions.seeds import create_ais_release_pset
+from functions.execution import DeleteErrorParticle
+from functions.advection import StokesDrift
 
 # configuration parameters
 t_min, t_max = datetime(2023, 11, 11), datetime(2023, 11, 18)
