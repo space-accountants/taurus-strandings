@@ -1,4 +1,6 @@
 # taurus-strandings
+![map of spatial temporal trajectories](https://github.com/https://github.com/space-accountants/taurus-strandings/tree/main/docs/img/taurus_header.png?raw=true)
+
 Simulation runs for stranded bulls along the coast of Brittany, which occured in November and December 2023.
 This is supplementary code for the followthemoney article, that can be found [here](www.ftm.nl). 
 
