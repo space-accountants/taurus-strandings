@@ -2,7 +2,7 @@
 ![map of spatial temporal trajectories](docs/img/taurus_header.png?raw=true)
 
 Simulation runs for stranded bulls along the coast of Brittany, which occured in November and December 2023.
-This is supplementary code for the [follow the money](https://www.ftm.nl) article, that can be found [here](https://www.ftm.nl/artikelen/aangespoelde-koe-in-bretagne). 
+This is supplementary code for the [follow the money](https://www.ftm.nl) article, that can be found [here](https://www.ftm.nl/artikelen/aangespoelde-kalfjes-in-bretagne). 
 
 ## Main Scripts
 Scripts for running a basic forward in time simulation, can be done by running the following scripts:
